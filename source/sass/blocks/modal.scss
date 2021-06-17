@@ -1,0 +1,113 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  //z-index: 9999;
+
+  .slide3__title_small,
+  .slide3__title {
+    text-align: left;
+    padding: 0;
+  }
+  .slide3__title {
+    margin-bottom: 14px;
+  }
+}
+.modal__content {
+  position: relative;
+  margin: 122px 60px 0 140px;
+  background: #ffffff;
+  font-family: "DINPro", sans-serif;
+  color: #2e2e2e;
+  font-size: 25px;
+  padding: 40px 50px 30px 212px;
+  border-radius: 40px;
+  //min-height: 574px;
+}
+.modal__list {
+  list-style: none;
+  margin-bottom: 45px;
+}
+.modal__item {
+  display: none;
+  margin-bottom: 16px;
+  color: #2e2e2e;
+}
+.modal__item._visible {
+  display: block;
+}
+.modal__item-title {
+  font-family: "GilroyExtraBold", sans-serif;
+  font-size: 25px;
+  color: #8cc9e8;
+  margin-bottom: 5px;
+}
+.modal__close {
+  position: absolute;
+  right: 25px;
+  top: 30px;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+}
+.modal__close:before, .modal__close:after {
+  position: absolute;
+  left: 15px;
+  content: "";
+  height: 42px;
+  width: 5px;
+  background-color: #272727;
+}
+.modal__close:before {
+  transform: rotate(45deg);
+}
+.modal__close:after {
+  transform: rotate(-45deg);
+}
+.modal__pagination {
+  display: inline-flex;
+  align-items: center;
+}
+.modal__pagination-pages {
+  margin: 0 8px;
+}
+.modal__pagination-link {
+  display: inline-block;
+  position: relative;
+  width: 22px;
+  height: 20px;
+  cursor: pointer;
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    border: 3px solid #272727;
+  }
+}
+.modal__pagination-link._active:before {
+  background: #fc6da9;
+  border: 3px solid #fc6da9;
+}
+.modal__pagination-arrow {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-top: 5px solid #272727;
+  border-right: 5px solid #272727;
+  cursor: pointer;
+}
+.modal__pagination-arrow._prev {
+  transform: rotate(-135deg);
+}
+.modal__pagination-arrow._next {
+  transform: rotate(45deg);
+}
