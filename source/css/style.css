@@ -241,7 +241,9 @@ body {
   /* Necessary for mobile scrolling */
   scroll-snap-stop: always;
   display: flex;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  -ms-scroll-chaining: none;
+  overscroll-behavior: none; }
 
 .snap-slide {
   height: 100vh;
@@ -642,7 +644,7 @@ body {
 
 .modal {
   display: none;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;

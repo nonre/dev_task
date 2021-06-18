@@ -12,7 +12,6 @@ const modal = document.querySelector(".modal");
 const openModal = document.querySelector(".slide3__btn");
 const closeModal = document.querySelector(".modal__close");
 openModal.addEventListener("click", () => {
-    console.log("open");
     modal.style.display = "inline";
 });
 closeModal.addEventListener("click", () => {
@@ -52,4 +51,12 @@ controls.forEach(control => {
        currentItems = modalListItems.slice(i, i + 3);
        currentItems.forEach(item => item.classList.add("_visible"));
    })
+});
+document.querySelectorAll('a[href^="#"]').forEach(elem => {
+    elem.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(elem.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+        });
+    });
 });

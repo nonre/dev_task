@@ -12,16 +12,14 @@ body {
   overflow-y: hidden; // !
 }
 .snap-container {
-  //width: 3080px;
   background: url("../img/global/bg.png") 0 0 no-repeat;
   background-size: cover;
-  //height: 100vh;
-  //min-width: 100vw;
   scroll-snap-type: x mandatory; //!
   -webkit-overflow-scrolling: touch; /* Necessary for mobile scrolling */
   scroll-snap-stop: always;
   display: flex;
   overflow-y: hidden;
+  overscroll-behavior: none;
 }
 .snap-slide {
   height: 100vh;
